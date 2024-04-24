@@ -1,0 +1,38 @@
+<div class="tic-tac-toe">
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+</div>
+
+<style>
+    .tic-tac-toe {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+    }
+
+    .cell {
+        width: 100px;
+        height: 100px;
+        background-color: lightgray;
+        border: 1px solid gray;
+    }
+</style>
