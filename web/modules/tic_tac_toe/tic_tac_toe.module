@@ -5,3 +5,15 @@
  * Primary module hooks for Tic Tac Toe module.
  */
 
+
+/**
+ * Implements hook_theme().
+ */
+function tic_tac_toe_theme($existing, $type, $theme, $path) {
+  return [
+    'tic_tac_toe_template' => [
+      'template' => 'tic-tac-toe-template',
+      'variables' => [],
+    ],
+  ];
+}

@@ -19,7 +19,7 @@ class TicTacToeBlock extends BlockBase {
    */
   public function build() {
     return [
-      '#theme' => 'tic-tac-toe-template',
+      '#theme' => 'tic_tac_toe_template',
       '#attached' => [
         'library' => [
           'tic_tac_toe/tic_tac_toe_library',

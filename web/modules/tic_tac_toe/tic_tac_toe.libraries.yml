@@ -1,3 +1,6 @@
 tic_tac_toe_library:
+  css:
+    theme:
+      css/tic_tac_toe.css: {}
   js:
-    js/your_script.js: {}
+    js/tic_tac_toe.js: {}
