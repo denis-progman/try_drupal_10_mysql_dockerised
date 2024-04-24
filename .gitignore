@@ -3,3 +3,5 @@
 .env
 .terraform
 .DS_Store
+vendor
+node_modules
