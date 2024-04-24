@@ -1,0 +1,7 @@
+name: 'Tic Tac Toe'
+type: module
+description: 'web page game'
+package: PageGames
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:block
