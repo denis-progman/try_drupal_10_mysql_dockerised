@@ -4,3 +4,67 @@
  * @file
  * Install, update and uninstall functions for the Tic Tac Toe module.
  */
+
+/**
+ * Implements hook_install().
+ */
+function tic_tac_toe_install() {
+    \Drupal::messenger()->addStatus(t('Tic Tac Toe module has been installed.'));
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function tic_tac_toe_uninstall() {
+    \Drupal::messenger()->addStatus(t('Tic Tac Toe module has been uninstalled.'));
+}
+
+/**
+ * Implements hook_schema().
+ */
+function tic_tac_toe_schema()
+{
+    $schema['tic_tac_toe_games'] = [
+        'description' => 'Stores the state of a Tic Tac Toe games.',
+        'fields' => [
+            'id' => [
+                'description' => 'Primary Key: Unique game ID.',
+                'type' => 'serial',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ],
+            'created_at' => [
+                'description' => 'The Unix timestamp when the game was created.',
+                'type' => 'int',
+                'not null' => TRUE,
+            ],
+            'game_number' => [
+                'description' => 'The game number.',
+                'type' => 'int',
+                'not null' => TRUE,
+                'default' => 1,
+            ],
+            'last_player_ip' => [
+                'description' => 'The IP address of the last player.',
+                'type' => 'varchar',
+                'length' => 39,
+                'not null' => TRUE,
+                'default' => '',
+            ],
+            'cell' => [
+                'description' => 'The cell number.',
+                'type' => 'int',
+                'not null' => TRUE,
+            ],
+            'is_winner' => [
+                'description' => 'The player who won the game.',
+                'type' => 'int',
+                'not null' => TRUE,
+                'default' => 0,
+            ],
+        ],
+        'primary key' => ['id'],
+    ];
+
+    return $schema;
+}
