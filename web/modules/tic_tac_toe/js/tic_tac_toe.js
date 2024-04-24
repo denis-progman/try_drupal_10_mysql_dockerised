@@ -6,7 +6,7 @@ function draw(field) {
 }
 
 const field = document.getElementById('game')
-let steps = 0``
+let steps = 0
 let cell
 
 
