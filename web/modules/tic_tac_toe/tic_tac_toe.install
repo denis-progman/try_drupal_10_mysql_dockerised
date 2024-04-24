@@ -38,29 +38,17 @@ function tic_tac_toe_schema()
                 'type' => 'int',
                 'not null' => TRUE,
             ],
-            'game_number' => [
-                'description' => 'The game number.',
-                'type' => 'int',
-                'not null' => TRUE,
-                'default' => 1,
-            ],
-            'last_player_ip' => [
+            'user_ip' => [
                 'description' => 'The IP address of the last player.',
                 'type' => 'varchar',
                 'length' => 39,
                 'not null' => TRUE,
                 'default' => '',
             ],
-            'cell' => [
+            'cell_number' => [
                 'description' => 'The cell number.',
                 'type' => 'int',
                 'not null' => TRUE,
-            ],
-            'is_winner' => [
-                'description' => 'The player who won the game.',
-                'type' => 'int',
-                'not null' => TRUE,
-                'default' => 0,
             ],
         ],
         'primary key' => ['id'],

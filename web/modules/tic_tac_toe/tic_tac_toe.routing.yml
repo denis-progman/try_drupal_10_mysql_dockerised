@@ -1,0 +1,10 @@
+tic_tac_toe.move:
+  path: '/tic_tac_toe/move'
+  defaults:
+    _controller: '\Drupal\tic_tac_toe\Controller\GameController::move'
+    _title: 'New game move'
+  methods: [POST]
+  requirements:
+    _permission: 'access content'
+  options:
+    _format: 'json'
